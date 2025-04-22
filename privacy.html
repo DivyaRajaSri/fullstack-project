@@ -21,14 +21,18 @@
         nav {
             text-align: center;
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         nav a {
             color: #333;
             text-decoration: none;
             padding: 10px 20px;
-            margin: 10px;
+            margin: 10px 5px;
             border: 1px solid #333;
             border-radius: 5px;
+            display: inline-block;
         }
         nav a:hover {
             background-color: #333;
@@ -40,6 +44,13 @@
         }
         h2 {
             color: #333;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                flex: 1 1 auto;
+                margin: 5px;
+            }
         }
     </style>
 </head>
@@ -54,7 +65,6 @@
     <a href="contact.html">Contact Us</a>
     <a href="faq.html">FAQ</a>
     <a href="profile.html">Profile</a>
-    
 </nav>
 
 <section>
@@ -72,6 +82,10 @@
 
     <h2>Contact Us</h2>
     <p>If you have any questions or concerns about our privacy policy, please <a href="contact.html">contact us</a>.</p>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="index.html" style="color: #fff; background-color: #333; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Back to About Page</a>
+    </div>
 </section>
 
 </body>

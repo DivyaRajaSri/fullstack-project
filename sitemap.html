@@ -21,14 +21,18 @@
         nav {
             text-align: center;
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         nav a {
             color: #333;
             text-decoration: none;
             padding: 10px 20px;
-            margin: 10px;
+            margin: 10px 5px;
             border: 1px solid #333;
             border-radius: 5px;
+            display: inline-block;
         }
         nav a:hover {
             background-color: #333;
@@ -47,6 +51,14 @@
         }
         li {
             padding: 8px 0;
+        }
+
+        /* Responsive fix */
+        @media (max-width: 600px) {
+            nav a {
+                flex: 1 1 auto;
+                margin: 5px;
+            }
         }
     </style>
 </head>
@@ -81,6 +93,11 @@
         <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="help.html">Help & Support</a></li>
     </ul>
+
+    <!-- Back to About Page Button -->
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="index.html" style="color: #fff; background-color: #333; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Back to About Page</a>
+    </div>
 </section>
 
 </body>

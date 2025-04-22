@@ -26,9 +26,10 @@
             color: #333;
             text-decoration: none;
             padding: 10px 20px;
-            margin: 10px;
+            margin: 10px 5px;
             border: 1px solid #333;
             border-radius: 5px;
+            display: inline-block;
         }
         nav a:hover {
             background-color: #333;
@@ -40,6 +41,19 @@
         }
         h2 {
             color: #333;
+        }
+
+        /* Responsive fix to avoid jumbling on small screens */
+        @media (max-width: 600px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                margin: 5px;
+                flex: 1 1 auto;
+            }
         }
     </style>
 </head>
@@ -71,6 +85,11 @@
 
     <h2>Contact Us</h2>
     <p>If you have any questions regarding our terms and conditions, please <a href="contact.html">contact us</a>.</p>
+
+    <!-- Back to About Page Button -->
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="index.html" style="color: #fff; background-color: #333; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Back to About Page</a>
+    </div>
 </section>
 
 </body>
